@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+    text-align: none;
+}
+
+.site-wrapper {
+    overflow-x: hidden;
+    display: flex;
+    align-items: center; 
+    justify-self: center;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 10rem ;
+    position: relative;
+}
+
+
+
+#game-wrapper {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+background: url(../imgs/bg.gif);
+background-repeat: repeat-x;
+background-size: cover;
+background-position: bottom;
+}
+
+#character {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    bottom: 30%;
+}
+#character > img{
+width: 100%;
+}
+
+.jumpe{
+    animation: jumpe 1s ease-out;
+}
+
+#block{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+   bottom: 27%;
+    left: 0;
+    background: url(../imgs/box.png);
+    animation: block 6s ease-in infinite;
+}
+
+
+#jumpeBtn{
+    position: relative;
+    width: 180px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(255, 136, 0);
+    color: white;
+    box-shadow: 0px 10px 10px rgb(255, 198, 146) inset,
+    0px 5px 10px rgba(5, 5, 5, 0.212),
+    0px -10px 10px rgb(255, 102, 0) inset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  
+  #jumpeBtn::before {
+    width: 80%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.678);
+    content: "";
+    filter: blur(1px);
+    top: 7px;
+    border-radius: 50%;
+  }
+  
+  #jumpeBtn::after {
+    width: 80%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.137);
+    content: "";
+    filter: blur(1px);
+    bottom: 7px;
+    border-radius: 50%;
+  }
+  
+  #jumpeBtn:hover {
+    animation: jello-horizontal 0.9s both;
+  }
+  
+  @keyframes jello-horizontal {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+  
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+  
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+  
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+
+
+
+
+
+@keyframes block{
+
+0%{
+    left: 100%;
+}
+
+}
+
+@keyframes jumpe {
+    0%, 100%{
+    }
+    
+    50%{
+        
+        bottom: 50%;
+
+}
+
+
+}
+
