@@ -31,7 +31,11 @@ audioButtons.forEach(function (button) {
 // audioBtn
 
 
+window.addEventListener('load', () => {
 
+setTimeout(() => {
+  
+  
 let checkDead = setInterval(() => {
   let characterBottom = parseInt(window.getComputedStyle(character).getPropertyValue('top'));
   let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
@@ -39,13 +43,16 @@ let checkDead = setInterval(() => {
 let restart = document.querySelector('#restart');
 
 restart.addEventListener('click', () => {
-  
-  location.reload();
-  gameOver.style.display = 'none'
+
+setTimeout(() => {
+ gameOver.style.display = 'flex'
+ restart.innerHTML = 'wait...'
+  location.reload()
+}, 1);
 
 
-});
-  
+
+})
   if (blockLeft < 60 && blockLeft > 0 && characterBottom > 220) {
     
     clickSound.play();
@@ -54,3 +61,9 @@ restart.addEventListener('click', () => {
   }
 
 }, 0);
+
+
+
+}, 1);
+
+});
