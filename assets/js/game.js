@@ -45,10 +45,9 @@ let restart = document.querySelector('#restart');
 restart.addEventListener('click', () => {
 
 setTimeout(() => {
- gameOver.style.display = 'flex'
- restart.innerHTML = 'wait...'
+  restart.innerHTML = 'wait...'
   location.reload()
-}, 1);
+},0);
 
 
 
