@@ -1,3 +1,17 @@
+window.addEventListener('load', () => {
+  let preLoader = document.querySelector('#preLoader');
+  let bgSound = document.querySelector("#bgSound");
+  bgSound.currentTime = 0;
+
+  setTimeout(() => {
+    preLoader.style.height = '0';
+  }, 0);
+
+  bgSound.play();
+});
+// preLoader
+
+
 let character = document.querySelector('#character');
 let block = document.querySelector('#block');
 
@@ -8,14 +22,6 @@ document.querySelector('#jumpeBtn').addEventListener('click', () => {
   }, 1000);
 });
 // jumpeBtn
-
-window.addEventListener('load', () => {
-  let preLoader = document.querySelector('#preLoader')
-  setTimeout(() => {
-    preLoader.style.height = '0'
-  }, 1000);
-});
-// preLoader
 
 
 
@@ -31,6 +37,7 @@ audioButtons.forEach(function (button) {
 // audioBtn
 
 
+
 window.addEventListener('load', () => {
 
 setTimeout(() => {
@@ -42,21 +49,26 @@ let checkDead = setInterval(() => {
   let gameOver = document.querySelector('.gameOver');
 let restart = document.querySelector('#restart');
 
-restart.addEventListener('click', () => {
 
-setTimeout(() => {
-  restart.innerHTML = 'wait...'
-  location.reload()
-},0);
-
-
-
-})
   if (blockLeft < 60 && blockLeft > 0 && characterBottom > 220) {
     
     clickSound.play();
     gameOver.style.display = 'flex'
     clearInterval(checkDead); // Stop the interval when the condition is met
+
+restart.addEventListener('click', () => {
+
+  restart.innerHTML = "please wait..."
+  setTimeout(() => {
+    
+
+    location.reload()
+    
+
+  }, 1000);
+
+})
+
   }
 
 }, 0);
