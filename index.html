@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Running Game version 0.1</title>
+    <title>Running Game version 0.2</title>
     <link rel="shortcut icon" href="./assets/imgs/favicon_io/android-chrome-512x512.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/game.css">
 </head>
@@ -13,7 +13,26 @@
 
     <div class="site-wrapper">
 
-        <div id="game-wrapper">
+        
+        <div id="preLoader">
+            
+            <div class="banter-loader">
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+            <div class="banter-loader__box"></div>
+          </div>
+
+      </div><!--preLoader-->
+
+        
+      <div id="game-wrapper">
+            <a class="logo audioBtn" href="https://sheikharbab.github.io/portfolio/" target="_blank"><img src="./assets/imgs/logo/arbab.png" alt=""></a>
 
             <div id="character"><img src="./assets/imgs/mainCharacter.png" alt=""></div><!--character-->
 
@@ -24,7 +43,16 @@
 
         <button id="jumpeBtn"  class=audioBtn>jumpe</button>
 
-        <audio id="clickSound" src="./assets/audio/mixkit-arcade-game-jump-coin-216.wav"></audio>
+        <audio id="clickSound" src="./assets/audio/jumpe.wav"></audio>
+
+
+        <div class="gameOver">
+
+<h1>Game Over</h1>
+
+<button id="restart">Restart</button>
+
+        </div><!--gamerOver-->
     </div><!--site-wrapper-->
 
 
