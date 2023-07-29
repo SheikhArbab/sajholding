@@ -5,9 +5,24 @@ window.addEventListener('load', () => {
 
   setTimeout(() => {
     preLoader.style.height = '0';
+    
+    let updateElementValue = (sv) => {
+      let score = document.querySelector('#score');
+      score.innerHTML = sv;
+    
+      if (sv < 9999999) {
+        setTimeout(() => {
+          bgSound.play();
+          updateElementValue(sv + 1);
+        }, 1000);
+      }
+    }
+    
+    updateElementValue(0);
+    
+    
   }, 0);
 
-  bgSound.play();
 });
 // preLoader
 

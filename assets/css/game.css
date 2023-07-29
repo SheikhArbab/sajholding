@@ -45,6 +45,18 @@ background-color: rgb(255, 136, 0);
 transition: all 1s ease;
 }
 
+nav > ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > ul > li:nth-child(2){
+padding-right: 2em;
+color: white;
+filter: drop-shadow(2px 2px 2px black);
+}
+
 .gameOver{
   overflow: hidden;
   z-index: 1111111111;
