@@ -17,6 +17,10 @@ window.addEventListener('load', () => {
         }, 1000);
       }
     }
+
+
+
+    
     
     updateElementValue(0);
     
