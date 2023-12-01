@@ -100,9 +100,6 @@ nav{
 
 
 
-nav ul {
-  margin-top: 12px;
-}
 .logo a{
   font-weight: 600;
   font-size: 40px;
@@ -302,9 +299,8 @@ gap: 10px;
 border-radius: 50%;
 background-color: white;
 display: flex;
-align-content: center;
+align-items: center;
 justify-content: center;
-padding-top: 5px;
 }
 .team  ul i{
 color: var(--primary);
@@ -483,6 +479,19 @@ footer{
     /* // `sm` applies to x-small devices (portrait phones, less than 576px) */
     @media (max-width: 575.98px) { 
 
+
+        
+.team  ul li{
+    width: 22px;
+    height: 22px;
+}
+.team  ul i{
+font-size: 15px;
+}
+.team > h1{
+font-size: 20px;
+}
+      
         .header-text{
             margin-top: 40%;
             font-size: 8px;
@@ -671,7 +680,10 @@ footer p{
        height: 0;
         }
 
-
+        .logo {
+            margin-top: 20px;
+          }
+          
 
 
      }
