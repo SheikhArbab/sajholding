@@ -23,7 +23,117 @@
 body{
     background-color: #080808;
     color: var(--white);
+    overflow: hidden;
 }
+#preloader{
+    background-color: #080808;
+    width: 100dvw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    position: fixed;
+    z-index: 11111111999999911111;
+    left: 0;
+    top: 0;
+overflow: hidden;
+transition: all 1.5s ease;
+}
+.glitch {
+    position: relative;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    letter-spacing: 5px;
+    z-index: 1;
+    animation: shift 1s ease-in-out infinite alternate;
+  }
+  
+  .glitch:before,
+  .glitch:after {
+    display: block;
+    content: attr(data-glitch);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+  }
+  
+  .glitch:before {
+    animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    color: #8b00ff;
+    z-index: -1;
+  }
+  
+  .glitch:after {
+    animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    color: #00e571;
+    z-index: -2;
+  }
+  
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+    }
+  
+    20% {
+      transform: translate(-3px, 3px);
+    }
+  
+    40% {
+      transform: translate(-3px, -3px);
+    }
+  
+    60% {
+      transform: translate(3px, 3px);
+    }
+  
+    80% {
+      transform: translate(3px, -3px);
+    }
+  
+    to {
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes shift {
+    0%, 40%, 44%, 58%, 61%, 65%, 69%, 73%, 100% {
+      transform: skewX(0deg);
+    }
+  
+    41% {
+      transform: skewX(10deg);
+    }
+  
+    42% {
+      transform: skewX(-10deg);
+    }
+  
+    59% {
+      transform: skewX(40deg) skewY(10deg);
+    }
+  
+    60% {
+      transform: skewX(-40deg) skewY(-10deg);
+    }
+  
+    63% {
+      transform: skewX(10deg) skewY(-5deg);
+    }
+  
+    70% {
+      transform: skewX(-50deg) skewY(-20deg);
+    }
+  
+    71% {
+      transform: skewX(10deg) skewY(-10deg);
+    }
+  }
+  
+
+
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -44,7 +154,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(-45deg, #f9bb476c, rgba(0, 0, 0, 0.748) 40%), url('https://wallpapers.com/images/hd/gold-lamborghini-lqwfgnno3dupzahj.jpg');
+    background: linear-gradient(-45deg, #f9bb476c, rgba(0, 0, 0, 0.748) 40%), url('../imgs/bg.jpg');
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -78,7 +188,7 @@ nav{
     height:100px;
     top: 0;
     background-color: black;
-    z-index: 1111111111111111111 !important;
+    z-index: 11111111 !important;
 
 }
 
@@ -410,11 +520,11 @@ height: 60px;
 
 /* <-----------------contact------------------> */
 
-.contact-left{
-    flex-basis: 35%;
+.contact-left{   
+    width: 48%;
 }
-.contact-right{
-    flex-basis:60%;
+.contact-right{ 
+    width: 48%; 
 }
 .contact-left a {
     color: var(--white);
@@ -569,6 +679,12 @@ footer p{
     /* // `lg` applies to medium devices (tablets, less than 992px) */
     @media (max-width: 991.98px) { 
 
+        .contact-left{   
+            width: 98%;
+        }
+        .contact-right{ 
+            width: 98%; 
+        }
       .dropdown-toggle{
           background-color:black;
           border-radius: 12px;

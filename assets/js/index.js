@@ -1,3 +1,12 @@
+// Hide the preloader once the page is fully loaded
+window.addEventListener("load", function () {
+  let preloader = document.querySelector("#preloader");
+  document.body.style.overflow = 'auto';
+  preloader.style.height = "0%";
+});
+
+
+
 const tabTitles = document.querySelector('.tab-titles');
 const filterButtons = tabTitles.querySelectorAll('.filter-button');
 const categoryItems = document.querySelectorAll('.tab-contents');
