@@ -447,9 +447,11 @@ padding: 50px 0;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    width: 90%;
 }
 .work img{
     border-radius: 10px;
+    height: 100%;
     width: 100%;
     object-fit:cover ;
     object-position: center center;

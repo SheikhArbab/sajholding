@@ -55,46 +55,61 @@ window.addEventListener("scroll", () => {
 
 
 window.addEventListener("scroll", function () {
-    var navbar = document.querySelector("nav");
-    if (window.pageYOffset > 550) {
-      navbar.classList.add("fixed");
-    } else {
-      navbar.classList.remove("fixed");
-    }
-  });
-  const dropdownToggle = document.querySelector('.dropdown-toggle');
-  const dropdownMenu = document.querySelector('.dropdown-menu');
-  
-  document.querySelector('.menu-container').addEventListener('click', function () {
-    this.classList.toggle('clicked');
-  });
-  document.querySelector('.dropdown-toggle').addEventListener('click', () => {
-    let ul = document.querySelector('ul');
-    
-    if (ul.style.height == '100vh') {
-      ul.style.height = '0vh';
-    } else {
-      ul.style.height = '100vh';
-    }
-  });
-  
-  
-  $(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
-      loop:true,
-      margin:10,
-      nav:true,
-      responsive:{
-        0:{
-          items:1
-        },
-        800:{
-          items:2
-        },
-        1200:{
-          items:3
-        }
-      }
-    });
-  });
+  var navbar = document.querySelector("nav");
+  if (window.pageYOffset > 550) {
+    navbar.classList.add("fixed");
+  } else {
+    navbar.classList.remove("fixed");
+  }
+});
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownMenu = document.querySelector('.dropdown-menu');
 
+document.querySelector('.menu-container').addEventListener('click', function () {
+  this.classList.toggle('clicked');
+});
+document.querySelector('.dropdown-toggle').addEventListener('click', () => {
+  let ul = document.querySelector('ul');
+
+  if (ul.style.height == '100vh') {
+    ul.style.height = '0vh';
+  } else {
+    ul.style.height = '100vh';
+  }
+});
+
+
+$(document).ready(function () {
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      800: {
+        items: 2
+      },
+      1200: {
+        items: 3
+      }
+    }
+  });
+});
+
+
+var typed = new Typed(".auto-type", {
+  strings: [
+    "Championing Excellence &mdash; Forging Legacies",
+    "Guiding Excellence &mdash; Sculpting Legacies",
+    "Igniting Excellence &mdash; Shaping Legacies",
+    "Fueling Excellence &mdash; Building Legacies",
+    "Empowering Excellence &mdash; Nurturing Legacies",
+    "Inspiring Excellence &mdash; Carving Legacies",
+    "Fostering Excellence &mdash; Molding Legacies",
+    "Elevating Excellence &mdash; Weaving Legacies",
+    "Radiating Excellence &mdash; Designing Legacies",
+    "Spearheading Excellence &mdash; Engraving Legacies"
+  ], typeSpeed: 20, backSpeed: 20, loop: !0
+});
