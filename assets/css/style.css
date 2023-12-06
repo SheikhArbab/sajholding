@@ -442,9 +442,20 @@ height: 60px;
     display: inline-block;
     color: var(--gray);
 }
+.db-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
 .db{
-    display: block;
+    display: flex;
+    align-items: center;
     margin: 10px 0;
+    text-align: start;
+    height: 30px;
+    font-size: 14px !important;
 }
 .btn:hover,  .btn:hover i{
    color: var(--white) !important;
@@ -486,6 +497,9 @@ footer{
 
         .db{
             font-size: 10px !important;
+        }
+        .db > i{
+            font-size: 15px !important;
         }
 
         .work{
